@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="nav">
+            <div>
+                <h1 class="title">Keep-up</h1>
+            </div>
+            <div class="nav-buttons">
+                <button class="new-task btn">New task</button>
+                <button class="new-project btn">New project</button>
+            </div>
+        </section>
+       <div class="main">
+        <section class="sidebar">
+            <button class="today-btn btn">Today</button>
+            <button class="all-task-btn btn">All tasks</button>
+            <button class="projects btn">All projects</button>
+        </section>
+        <section class="content">
+            <table class="table">
+                <tbody>
+                    <tr class="table-title">
+                        <th class="title-cell">
+                            Description
+                        </th>
+                        <th class="duDate-cell">
+                            Due date
+                        </th>
+                        <th class="priority-cell">
+                            Priority
+                        </th>
+                        <th class="remove-cell">
+                            Remove
+                        </th>
+                    </tr>
+                </tbody>
+                <tbody class="tb-tasks">
+                    <!-- --------------- Books added with JS ------------------ -->
+                </tbody>
+            </table>
+            <div class="overlay" id="overlay">
+                <div class="modal">
+                    <form class="add-task-form" id="addTaskForm">
+                        <button class="close-btn" id="closeFormBtn">&times;</button>
+                        <input
+                          class="input"
+                          type="text"
+                          id="todoInput"
+                          placeholder="New task"
+                          required
+                          maxlength="40"
+                        />
+                        <p class="error-msg" id="errorMsg"></p>
+                        <p>Due date</p>
+                        <input
+                          class="input"
+                          type="date"
+                          id="todoDate"
+                          placeholder="Due date"
+                          required
+                          max="1000"
+                        />
+                        <p>Priority</p>
+                         <select class="input" id="todoPriority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <button class="btn btn-submit" type="submit">Add</button>
+                    </form>
+                </div>
+        </section>
+       </div>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+</html>
